@@ -1,0 +1,58 @@
+<html>
+<head>
+<!--
+Copyright 2010 Kappa Computer Solutions, LLC and Brian Katzung
+http://www.kappacs.com
+
+Use and distribution of this code is subject to the "MIT License":
+http://opensource.org/licenses/mit-license.php
+-->
+<link rel='stylesheet' href='kcstabs.css' />
+<!--[if IE]><link rel='stylesheet' href='kcstabs.css' /><![endif]-->
+<script type='text/javascript' src='prototype.js'></script>
+<script type='text/javascript' src='kcstabs.js'></script>
+<script type='text/javascript'>
+function onSel () {
+    $('c1_6').innerHTML = "Content 1.6<br />at " + new Date().toString();
+}
+
+function init () {
+    Event.observe($('c1_6'), 'tab:selected', onSel, false);
+    KCSTabs.initialize();
+}
+</script>
+<style type='text/css'>
+/* Site-specific tab styling */
+.tabs dt { border: solid 1px #000; margin-right: 4px;
+padding-left: 4px; padding-right: 4px; }
+.tabs dt.active { color: #FFF; background-color: #000; }
+.tabs dd { border: solid 1px #000; }
+</style>
+</head>
+<body onLoad='init()'>
+<dl class='tabs' id='tabs1'>
+<dt>Tab 1.1</dt><dt id='tab1.2'>Tab 1.2!</dt><dt>Tab 1.3</dt
+><dt>Tab 1.4</dt><dt>Tab 1.5</dt><dt>Tab 1.6</dt>
+<dd>Content 1.1</dd>
+<dd>Content 1.2<br />Line 2</dd>
+<dd>Content 1.3<br />Line 2<br />Line 3</dd>
+<dd>Content 1.4<br />Line 2<br />Line 3</dd>
+<dd>Content 1.5<br />Line 2</dd>
+<dd id='c1_6'>Content 1.6</dd>
+</dl>
+<dl class='tabs' id='tabs2'>
+<dt>Tab 2.1...</dt><dt>Tab 2.2</dt><dt id='tab2.3'>Tab 2.3!</dt>
+<dd>Content 2.1
+<div style='padding: 4px'>
+<dl class='tabs' id='inner'>
+<dt id='tab2.1.1'>Inner 1!</dt><dt>Inner 2</dt>
+<dd>Inner ONE content</dd>
+<dd>Inner TWO content</dd>
+</dl>
+</div>
+</dd>
+<dd>Content 2.2<br />Line 2</dd>
+<dd>Content 2.3<br />Line 2<br />Line 3</dd>
+</dl>
+</body>
+</html>

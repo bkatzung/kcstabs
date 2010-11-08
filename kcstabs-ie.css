@@ -1,0 +1,13 @@
+/*
+ * Copyright 2010 Kappa Computer Solutions, LLC and Brian Katzung
+ * http://www.kappacs.com
+ *
+ * Use and distribution of this code is subject to the "MIT License":
+ * http://opensource.org/licenses/mit-license.php
+ *
+ * Functional (not site-customized) supplemental style sheet
+ * for KCS Tabs under Internet Explorer
+ */
+
+.tabs dt { float: none; height: 0; }
+.tabs dd { clear: none; }
