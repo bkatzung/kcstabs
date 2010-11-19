@@ -1,3 +1,6 @@
+Synopsis
+--------
+
 Tab sets are defined by <DL>s (definition lists) with class 'tabs'.
 <DT>s define the tab labels and <DD>s define the tab content.
 If a tab label <DT> or tab set <DL> has an id, the active tab will
